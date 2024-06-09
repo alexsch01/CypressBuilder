@@ -1,4 +1,4 @@
-name: Create cypress.zip (12.6.0-custom)
+name: Build Cypress 12.6.0-custom
 
 on:
   workflow_dispatch:
