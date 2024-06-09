@@ -1,4 +1,4 @@
-name: v12.6.0-custom
+name: ${{ github.ref }}
 
 on:
   workflow_dispatch:
