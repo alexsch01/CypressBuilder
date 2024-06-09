@@ -1,4 +1,4 @@
-name: 12.6.0-custom
+name: v12.6.0-custom
 
 on:
   workflow_dispatch:
@@ -19,12 +19,12 @@ jobs:
             -v C:\GitHubActionsRoot:C:\GitHubActionsRoot `
             -w C:\GitHubActionsRoot `
           mcr.microsoft.com/windows/server:ltsc2022 {
-            .\12.6.0-custom.cmd
+            .\v12.6.0-custom.cmd
           }
         working-directory: C:\GitHubActionsRoot
 
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
-          name: 12.6.0-custom
+          name: v12.6.0-custom
           path: C:\GitHubActionsRoot\cypress.zip
