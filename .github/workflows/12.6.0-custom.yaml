@@ -1,3 +1,5 @@
+name: 12.6.0-custom
+
 on:
   workflow_dispatch:
 
