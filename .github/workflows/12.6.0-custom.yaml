@@ -1,4 +1,4 @@
-name: Create cypress.zip
+name: Create cypress.zip (12.6.0-custom)
 
 on:
   workflow_dispatch:
@@ -19,7 +19,7 @@ jobs:
             -v C:\GitHubActionsRoot:C:\GitHubActionsRoot `
             -w C:\GitHubActionsRoot `
           mcr.microsoft.com/windows/server:ltsc2022 {
-            .\script.cmd
+            .\12.6.0-custom.cmd
           }
         working-directory: C:\GitHubActionsRoot
 
