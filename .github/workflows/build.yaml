@@ -1,0 +1,33 @@
+name: Create cypress.zip
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-2022
+    steps:
+      - run: git clone https://github.com/alexsch01/test GitHubActionsRoot
+        working-directory: C:\
+        
+      - name: Build
+        run: |
+          docker run `
+            --rm `
+            --entrypoint powershell.exe `
+            --memory 8GB `
+            -v C:\GitHubActionsRoot:C:\GitHubActionsRoot `
+            -w C:\GitHubActionsRoot `
+          mcr.microsoft.com/windows/server:ltsc2022 {
+            .\script.cmd
+          }
+        working-directory: C:\GitHubActionsRoot
+
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress
+          path: C:\GitHubActionsRoot\cypress.zip
