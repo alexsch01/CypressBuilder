@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: windows-2022
     steps:
-      - run: git clone https://github.com/alexsch01/test GitHubActionsRoot
+      - run: git clone https://github.com/alexsch01/CypressBuilder
         working-directory: C:\
         
       - name: Build
