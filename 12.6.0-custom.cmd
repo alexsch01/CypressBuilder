@@ -16,7 +16,7 @@ vs_buildtools.exe --quiet --add Microsoft.VisualStudio.Workload.VCTools --includ
 set "PATH=%PATH%;C:\Program Files\Git\cmd;C:\Program Files\Git\usr\bin;C:\Program Files\nodejs;%LOCALAPPDATA%\Programs\Python\Python310;C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;%APPDATA%\npm"
 CALL npm i -g yarn node-gyp@8.4.1
 cd C:\
-git clone https://github.com/alexsch01/cypress-custom --single-branch Cypress-Source
+git clone https://github.com/alexsch01/cypress-custom --branch v12.6.0 --single-branch Cypress-Source
 cd Cypress-Source
 
 CALL yarn install
