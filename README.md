@@ -7,3 +7,5 @@ set CYPRESS_DOWNLOAD_PATH_TEMPLATE=https://github.com/alexsch01/cypress-custom/r
 npx cypress install --force
 npx cypress open
 ```
+
+https://github.com/alexsch01/cypress-custom
