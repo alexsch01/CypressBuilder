@@ -29,6 +29,6 @@ CALL yarn build-v8-snapshot-prod
 echo COMMAND: build-v8-snapshot-prod - COMPLETE
 
 cp .\packages\electron\dist\Cypress\browser_v8_context_snapshot.bin .\build\build\win-unpacked
-mv .\build\build\win-unpacked Cypress
+cp -r .\build\build\win-unpacked Cypress
 tar -a -c -f cypress.zip Cypress
 mv cypress.zip C:\GitHubActionsRoot\cypress.zip
